@@ -13,7 +13,7 @@ type Product struct {
 }
 
 func main(){
-	jsonData := `{"Name":"MacBook Pro","Price":1500,"Published":true}`
+	jsonData := `{"Name":"MacBook Pro","Price":1500,"Published":true}` //como estan puestos las mismas variables no va a tirar error, ya que es estricto
 
 	var p Product
 
