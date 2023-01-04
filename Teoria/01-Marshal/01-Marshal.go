@@ -7,9 +7,9 @@ import (
 )
 
 type Product struct {
-	Name string 
-	Price int 
-	Published bool
+	Name string `json:"name"`	//notacion snake para formato json
+	Price int 	`json:"price"`	
+	Published bool `json:"is_published"`	
 }
 
 func main(){
