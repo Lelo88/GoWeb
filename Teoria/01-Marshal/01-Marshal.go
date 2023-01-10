@@ -19,7 +19,7 @@ func main(){
 		Published: true,
 	}
 
-	jsonData, err := json.Marshal(p) //el objeto p se transforma en un objeto json
+	jsonData, err := json.Marshal(p) //el objeto p se transforma en un objeto json y lo imprime por consola
 	if err != nil {
 		log.Fatal(err)
 	}
