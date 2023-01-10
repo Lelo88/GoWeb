@@ -5,8 +5,10 @@ import (
 	"fmt"
 )
 
+var programacion = map[string]string {"bootcamp":"go"}
+
 func addValue (ctx context.Context) context.Context {
-	return context.WithValue(ctx, "bootcamp", "Go")
+	return context.WithValue(ctx, programacion, "go")
 }
 
 func main(){
@@ -16,6 +18,7 @@ func main(){
 	variable := newCtx.Value("bootcamp")
 
 	fmt.Println(variable)
+
 
 }
 
