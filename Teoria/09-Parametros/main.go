@@ -26,7 +26,6 @@ func BuscarEmpleado(c *gin.Context) {
     }	
 }
 
-
 func main() {
 	server := gin.Default()	
 	server.GET("/", PaginaPrincipal)
