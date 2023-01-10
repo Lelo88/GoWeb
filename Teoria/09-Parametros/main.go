@@ -27,7 +27,7 @@ func BuscarEmpleado(c *gin.Context) {
 }
 
 func main() {
-	server := gin.Default()	
+	server := gin.Default()		
 	server.GET("/", PaginaPrincipal)
 	server.GET("/empleado/:id", BuscarEmpleado)
 	server.Run(":8080")
