@@ -15,7 +15,7 @@ type request struct {
 
 func main() {
 	r:= gin.Default()
-	r.POST("/products", func(c *gin.Context) {
+	r.POST("/products", func(c *gin.Context) { //paso un articulo json sin id, para devolverlo con un id
 		var req request
 		if err:=c.ShouldBindJSON(&req); err!=nil{ //toma un objeto json y si hay un error, simplemente no hará nada, para que podamos manipular el error
 			c.JSON(400, gin.H{
@@ -24,8 +24,9 @@ func main() {
 			return 
 		}
 		req.ID = 4
-		c.JSON(200, "ok") //aca envio el codigo de respuesta en entero acompañado de un objeto
-						  //se retorna algo en el caso de que sea correcta la peticion
+		c.JSON(200, req) //aca envio el codigo de respuesta en entero acompañado de un objeto
+						  //se retorna un json con el id asignado en el caso de que sea correcta la peticion
+
 	})
 	r.Run()
 }
