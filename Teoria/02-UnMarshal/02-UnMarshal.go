@@ -22,4 +22,5 @@ func main(){
 	}
 
 	fmt.Println(p)
+	fmt.Printf("%+v/n",p)
 }

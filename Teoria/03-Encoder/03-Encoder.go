@@ -6,8 +6,8 @@ import (
 )
 
 type MyData struct {
-	ProductoID  string
-	Precio		float64	
+	ProductoID  string `json:"producto_id"`
+	Precio		float64	`json:"precio"`
 }
 
 func main(){
